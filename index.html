@@ -14,7 +14,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
+    <!-- Loading Overlay -->
+    <div id="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Inicializando sistema...</p>
+        </div>
+    </div>
 
     <!-- Main Container -->
     <div class="main-container">
@@ -44,6 +50,7 @@
                 <div class="control-circle bottom-right"></div>
             </div>
         </div>
+
         <!-- Content Sections -->
         <div class="content-sections">
             <!-- Information Section -->
@@ -71,6 +78,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- Featured Planets Section -->
             <div class="featured-section">
                 <div class="container">
@@ -104,119 +112,196 @@
                 </div>
             </div>
 
-        <!-- Timeline Section -->
-        <div class="timeline-section">
-            <div class="container">
-                <h2 class="section-title">Cronología de la Saga</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Episodio I: La Amenaza Fantasma</h3>
-                            <p>El inicio de la saga que nos presenta a Anakin Skywalker en Tatooine y la batalla de Naboo.</p>
-                            <div class="timeline-planets">
-                                <a href="galaxy.html?planet=tatooine&section=info" class="planet-tag">Tatooine</a>
-                                <a href="galaxy.html?planet=naboo&section=info" class="planet-tag">Naboo</a>
-                                <a href="galaxy.html?planet=coruscant&section=info" class="planet-tag">Coruscant</a>
+            <!-- Timeline Section -->
+            <div class="timeline-section">
+                <div class="container">
+                    <h2 class="section-title">Cronología de la Saga</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>Episodio I: La Amenaza Fantasma</h3>
+                                <p>El inicio de la saga que nos presenta a Anakin Skywalker en Tatooine y la batalla de Naboo.</p>
+                                <div class="timeline-planets">
+                                    <a href="galaxy.html?planet=tatooine&section=info" class="planet-tag">Tatooine</a>
+                                    <a href="galaxy.html?planet=naboo&section=info" class="planet-tag">Naboo</a>
+                                    <a href="galaxy.html?planet=coruscant&section=info" class="planet-tag">Coruscant</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Episodio II: El Ataque de los Clones</h3>
-                            <p>La formación del Ejército Clon en Kamino y el inicio de las Guerras Clon.</p>
-                            <div class="timeline-planets">
-                                <a href="galaxy.html?planet=kamino&section=info" class="planet-tag">Kamino</a>
-                                <a href="galaxy.html?planet=geonosis&section=info" class="planet-tag">Geonosis</a>
-                                <a href="galaxy.html?planet=coruscant&section=info" class="planet-tag">Coruscant</a>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>Episodio II: El Ataque de los Clones</h3>
+                                <p>La formación del Ejército Clon en Kamino y el inicio de las Guerras Clon.</p>
+                                <div class="timeline-planets">
+                                    <a href="galaxy.html?planet=kamino&section=info" class="planet-tag">Kamino</a>
+                                    <a href="galaxy.html?planet=geonosis&section=info" class="planet-tag">Geonosis</a>
+                                    <a href="galaxy.html?planet=coruscant&section=info" class="planet-tag">Coruscant</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Episodio III: La Venganza de los Sith</h3>
-                            <p>El fin de la República y el surgimiento del Imperio Galáctico.</p>
-                            <div class="timeline-planets">
-                                <a href="galaxy.html?planet=coruscant&section=info" class="planet-tag">Coruscant</a>
-                                <a href="galaxy.html?planet=mustafar&section=info" class="planet-tag">Mustafar</a>
-                                <a href="galaxy.html?planet=utapau&section=info" class="planet-tag">Utapau</a>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>Episodio III: La Venganza de los Sith</h3>
+                                <p>El fin de la República y el surgimiento del Imperio Galáctico.</p>
+                                <div class="timeline-planets">
+                                    <a href="galaxy.html?planet=coruscant&section=info" class="planet-tag">Coruscant</a>
+                                    <a href="galaxy.html?planet=mustafar&section=info" class="planet-tag">Mustafar</a>
+                                    <a href="galaxy.html?planet=utapau&section=info" class="planet-tag">Utapau</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Episodio IV: Una Nueva Esperanza</h3>
-                            <p>La destrucción de Alderaan y la batalla de Yavin que destruyó la primera Estrella de la Muerte.</p>
-                            <div class="timeline-planets">
-                                <a href="galaxy.html?planet=tatooine&section=info" class="planet-tag">Tatooine</a>
-                                <a href="galaxy.html?planet=alderaan&section=info" class="planet-tag">Alderaan</a>
-                                <a href="galaxy.html?planet=yavin&section=info" class="planet-tag">Yavin</a>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>Episodio IV: Una Nueva Esperanza</h3>
+                                <p>La destrucción de Alderaan y la batalla de Yavin que destruyó la primera Estrella de la Muerte.</p>
+                                <div class="timeline-planets">
+                                    <a href="galaxy.html?planet=tatooine&section=info" class="planet-tag">Tatooine</a>
+                                    <a href="galaxy.html?planet=alderaan&section=info" class="planet-tag">Alderaan</a>
+                                    <a href="galaxy.html?planet=yavin&section=info" class="planet-tag">Yavin</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Episodio V: El Imperio Contraataca</h3>
-                            <p>La batalla de Hoth y el entrenamiento de Luke en Dagobah.</p>
-                            <div class="timeline-planets">
-                                <a href="galaxy.html?planet=hoth&section=info" class="planet-tag">Hoth</a>
-                                <a href="galaxy.html?planet=dagobah&section=info" class="planet-tag">Dagobah</a>
-                                <a href="galaxy.html?planet=bespin&section=info" class="planet-tag">Bespin</a>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>Episodio V: El Imperio Contraataca</h3>
+                                <p>La batalla de Hoth y el entrenamiento de Luke en Dagobah.</p>
+                                <div class="timeline-planets">
+                                    <a href="galaxy.html?planet=hoth&section=info" class="planet-tag">Hoth</a>
+                                    <a href="galaxy.html?planet=dagobah&section=info" class="planet-tag">Dagobah</a>
+                                    <a href="galaxy.html?planet=bespin&section=info" class="planet-tag">Bespin</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Episodio VI: El Retorno del Jedi</h3>
-                            <p>La batalla final en Endor y la destrucción de la segunda Estrella de la Muerte.</p>
-                            <div class="timeline-planets">
-                                <a href="galaxy.html?planet=tatooine&section=info" class="planet-tag">Tatooine</a>
-                                <a href="galaxy.html?planet=endor&section=info" class="planet-tag">Endor</a>
-                                <a href="galaxy.html?planet=dagobah&section=info" class="planet-tag">Dagobah</a>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>Episodio VI: El Retorno del Jedi</h3>
+                                <p>La batalla final en Endor y la destrucción de la segunda Estrella de la Muerte.</p>
+                                <div class="timeline-planets">
+                                    <a href="galaxy.html?planet=tatooine&section=info" class="planet-tag">Tatooine</a>
+                                    <a href="galaxy.html?planet=endor&section=info" class="planet-tag">Endor</a>
+                                    <a href="galaxy.html?planet=dagobah&section=info" class="planet-tag">Dagobah</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <h4>Sobre Nosotros</h4>
+                        <p>Explorando los planetas de Star Wars desde 2024</p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <h4>Planetas</h4>
+                        <ul class="footer-links">
+                            <li><a href="galaxy.html?planet=tatooine&section=info">Tatooine</a></li>
+                            <li><a href="galaxy.html?planet=coruscant&section=info">Coruscant</a></li>
+                            <li><a href="galaxy.html?planet=naboo&section=info">Naboo</a></li>
+                            <li><a href="galaxy.html?planet=endor&section=info">Endor</a></li>
+                            <li><a href="galaxy.html?planet=hoth&section=info">Hoth</a></li>
+                            <li><a href="galaxy.html?planet=bespin&section=info">Bespin</a></li>
+                            <li><a href="galaxy.html?planet=mustafar&section=info">Mustafar</a></li>
+                            <li><a href="galaxy.html?planet=geonosis&section=info">Geonosis</a></li>
+                            <li><a href="galaxy.html?planet=utapau&section=info">Utapau</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <h4>Síguenos</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <h4>Sobre Nosotros</h4>
-                    <p>Explorando los planetas de Star Wars desde 2025</p>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <h4>Planetas</h4>
-                    <ul class="footer-links">
-                        <li><a href="galaxy.html?planet=tatooine&section=info">Tatooine</a></li>
-                        <li><a href="galaxy.html?planet=coruscant&section=info">Coruscant</a></li>
-                        <li><a href="galaxy.html?planet=naboo&section=info">Naboo</a></li>
-                        <li><a href="galaxy.html?planet=endor&section=info">Endor</a></li>
-                        <li><a href="galaxy.html?planet=hoth&section=info">Hoth</a></li>
-                        <li><a href="galaxy.html?planet=bespin&section=info">Bespin</a></li>
-                        <li><a href="galaxy.html?planet=mustafar&section=info">Mustafar</a></li>
-                        <li><a href="galaxy.html?planet=geonosis&section=info">Geonosis</a></li>
-                        <li><a href="galaxy.html?planet=utapau&section=info">Utapau</a></li>
-                    </ul>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <h4>Síguenos</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializar AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 50,
+            delay: 100,
+            easing: 'ease-out-cubic',
+            mirror: false,
+            startEvent: 'DOMContentLoaded'
+        });
+
+        // Mensajes de carga temáticos
+        const loadingMessages = [
+            "Inicializando sistema...",
+            "Limpiando el pelo de Wookie de la cabina...",
+            "Restaurando fluctuaciones en la Fuerza...",
+            "Cargando coordenadas hiperespaciales...",
+            "Recalibrando sables de luz...",
+            "Comprobando escudos deflectores...",
+            "Despertando a los droides de protocolo...",
+            "Ajustando el hiperimpulsor...",
+            "Sincronizando holocrones Jedi...",
+            "Revisando el mapa estelar..."
+        ];
+        document.addEventListener('DOMContentLoaded', function() {
+            const loadingText = document.querySelector('.loading-text');
+            if (loadingText) {
+                const msg = loadingMessages[Math.floor(Math.random() * loadingMessages.length)];
+                loadingText.textContent = msg;
+            }
+        });
+
+        // Control de carga y scroll
+        window.addEventListener('load', function() {
+            const loadingOverlay = document.getElementById('loading-overlay');
+            
+            // Asegurarse de que el scroll esté bloqueado
+            document.body.style.overflow = 'hidden';
+            
+            // Esperar un tiempo fijo para asegurar que todo esté cargado
+            setTimeout(function() {
+                // Verificar si las imágenes están cargadas
+                const images = document.querySelectorAll('img');
+                let imagesLoaded = 0;
+                const totalImages = images.length;
+
+                function checkImagesLoaded() {
+                    imagesLoaded++;
+                    if (imagesLoaded === totalImages) {
+                        // Todas las imágenes están cargadas, proceder con la animación
+                        loadingOverlay.style.opacity = '0';
+                        setTimeout(function() {
+                            loadingOverlay.style.display = 'none';
+                            document.body.style.overflow = 'auto';
+                        }, 500);
+                    }
+                }
+
+                // Si no hay imágenes, proceder inmediatamente
+                if (totalImages === 0) {
+                    checkImagesLoaded();
+                } else {
+                    // Verificar cada imagen
+                    images.forEach(function(img) {
+                        if (img.complete) {
+                            checkImagesLoaded();
+                        } else {
+                            img.addEventListener('load', checkImagesLoaded);
+                            img.addEventListener('error', checkImagesLoaded); // Manejar errores de carga
+                        }
+                    });
+                }
+            }, 2000); // Esperar 2 segundos antes de comenzar la verificación
+        });
+    </script>
 </body>
 </html>
-
