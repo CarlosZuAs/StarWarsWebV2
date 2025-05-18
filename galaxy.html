@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mapa Galáctico - Star Wars</title>
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-dark text-light">
+  <!-- Imagen de fondo de la galaxia -->
+  <div class="galaxy-background">
+    <img src="img/planets/galaxy-background.jpg" alt="Mapa Galáctico" class="w-100 h-100">
+  </div>
+
+  <div class="container-fluid py-4 position-relative">
+    <a href="index.html" class="btn btn-hologram btn-sm mb-3">
+      <span class="btn-text">← Volver</span>
+      <span class="btn-glow"></span>
+    </a>
+    <h2 class="section-title text-warning mb-4">Mapa de la Galaxia de Star Wars</h2>
+    <div id="galaxy-map" class="position-relative mx-auto" style="width: 1200px; height: 700px; overflow: hidden;">
+      <!-- Marcadores de planetas -->
+      <button class="planet-marker" data-planet="1" data-planet-name="tatooine">
+        <img src="img/planets/tatooine.jpg" alt="Tatooine">
+      </button>
+      
+      <button class="planet-marker" data-planet="2" data-planet-name="alderaan">
+        <img src="img/planets/alderaan.jpg" alt="Alderaan">
+      </button>
+      
+      <button class="planet-marker" data-planet="3" data-planet-name="yavin iv">
+        <img src="img/planets/yavin.jpg" alt="Yavin IV">
+      </button>
+      
+      <button class="planet-marker" data-planet="4" data-planet-name="hoth">
+        <img src="img/planets/hoth.jpg" alt="Hoth">
+      </button>
+      
+      <button class="planet-marker" data-planet="5" data-planet-name="dagobah">
+        <img src="img/planets/dagobah.jpg" alt="Dagobah">
+      </button>
+      
+      <button class="planet-marker" data-planet="6" data-planet-name="bespin">
+        <img src="img/planets/bespin.jpg" alt="Bespin">
+      </button>
+      
+      <button class="planet-marker" data-planet="7" data-planet-name="endor">
+        <img src="img/planets/endor.jpg" alt="Endor">
+      </button>
+      
+      <button class="planet-marker" data-planet="8" data-planet-name="naboo">
+        <img src="img/planets/naboo.jpg" alt="Naboo">
+      </button>
+      
+      <button class="planet-marker" data-planet="9" data-planet-name="coruscant">
+        <img src="img/planets/coruscant.jpg" alt="Coruscant">
+      </button>
+      
+      <button class="planet-marker" data-planet="10" data-planet-name="kamino">
+        <img src="img/planets/kamino.jpg" alt="Kamino">
+      </button>
+
+      <button class="planet-marker" data-planet="11" data-planet-name="mustafar">
+        <img src="img/planets/mustafar.jpg" alt="Mustafar">
+      </button>
+
+      <button class="planet-marker" data-planet="12" data-planet-name="geonosis">
+        <img src="img/planets/geonosis.jpg" alt="Geonosis">
+      </button>
+
+      <button class="planet-marker" data-planet="13" data-planet-name="utapau">
+        <img src="img/planets/utapau.png" alt="Utapau">
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal para mostrar datos del planeta -->
+  <div class="modal fade" id="planetModal" tabindex="-1" aria-labelledby="planetModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header">
+          <h5 class="modal-title" id="planetModalLabel">Planeta</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body" id="planetModalBody">
+          <!-- Aquí se mostrarán los datos del planeta -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS y tu script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/galaxy.js"></script>
+</body>
+</html>
