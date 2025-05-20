@@ -1,6 +1,3 @@
-
-
-
 #galaxy-map {
     transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: transform;
@@ -131,10 +128,6 @@
     text-align: right;
     flex: 1;
   }
-
-
-
-
 
 @font-face {
     font-family: 'Aurebesh';
@@ -822,5 +815,18 @@
     .planet-info-container {
       min-height: auto;
     }
+  }
+  
+  .hyperspace-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 0.5s ease-in;
+    z-index: 1;
   }
   

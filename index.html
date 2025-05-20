@@ -26,6 +26,7 @@
     <div class="main-container">
         <!-- Animated Background -->
         <div class="animated-bg"></div>
+        <div class="hyperspace-bg" style="display: none; opacity: 0;"></div>
         
         <!-- Control Panel Overlay -->
         <div class="control-panel">
@@ -237,6 +238,34 @@
             easing: 'ease-out-cubic',
             mirror: false,
             startEvent: 'DOMContentLoaded'
+        });
+
+        // Función para el efecto de hiperespacio
+        document.querySelector('.btn-hologram').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Obtener elementos
+            const hyperspaceBg = document.querySelector('.hyperspace-bg');
+            const contentSections = document.querySelector('.content-sections');
+            const footer = document.querySelector('.footer');
+            const viajeEstelarBtn = this;
+            
+            // Mostrar y hacer fade in del fondo de hiperespacio
+            hyperspaceBg.style.display = 'block';
+            hyperspaceBg.style.backgroundImage = 'url("img/hyperspace.gif")';
+            setTimeout(() => {
+                hyperspaceBg.style.opacity = '1';
+            }, 50);
+
+            // Eliminar elementos en lugar de ocultarlos
+            contentSections.remove();
+            footer.remove();
+            viajeEstelarBtn.remove();
+
+            // Redirigir después de 3 segundos
+            setTimeout(() => {
+                window.location.href = 'galaxy.html';
+            }, 3000);
         });
 
         // Mensajes de carga temáticos
