@@ -19,6 +19,9 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .planet-marker:hover {
@@ -41,6 +44,20 @@
   
   .planet-marker:focus {
     box-shadow: 0 0 0 0.25rem #ffc10780;
+  }
+  
+  .planet-marker::after {
+    content: attr(data-planet-name);
+    font-family: 'Aurebesh', Arial, sans-serif;
+    font-size: 0.8rem;
+    color: #ffc107;
+    text-transform: uppercase;
+    margin-top: 5px;
+    text-align: center;
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    text-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
   }
   
   .planet-modal-content {
@@ -131,7 +148,7 @@
 
 @font-face {
     font-family: 'Aurebesh';
-    src: url('../fonts/aurebesh/Aurebesh.otf') format('opentype');
+    src: url('../fonts/Aurebesh.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -139,7 +156,7 @@
   
   @font-face {
     font-family: 'Aurebesh';
-    src: url('../fonts/aurebesh/Aurebesh Bold.otf') format('opentype');
+    src: url('../fonts/Aurebesh Bold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
