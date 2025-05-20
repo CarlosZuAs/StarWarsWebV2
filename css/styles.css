@@ -847,3 +847,9 @@
     z-index: 1;
   }
   
+  .planet-marker[data-planet="14"] {
+    top: 35%;
+    left: 65%;
+    transform: scale(1.1);
+  }
+  

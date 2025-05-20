@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
       'kamino': '10',
       'mustafar': '13',
       'geonosis': '11',
-      'utapau': '12'
+      'utapau': '12',
+      'mandalore': '14'
     };
   
     // Relaciona el data-planet con el ID de la API de Swapi.tech
@@ -35,7 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
       10: '10', // Kamino
       11: '13', // Mustafar
       12: '11', // Geonosis
-      13: '12'  // Utapau
+      13: '12', // Utapau
+      14: '14'  // Mandalore
     };
   
     // Objeto con información adicional de los planetas
@@ -104,6 +106,11 @@ document.addEventListener('DOMContentLoaded', () => {
           name: 'Utapau',
           image: 'img/planets/utapau.png',
           description: 'Planeta con ciudades construidas en sumideros gigantes'
+      },
+      14: {
+          name: 'Mandalore',
+          image: 'img/planets/mandalore.jpg',
+          description: 'Planeta natal de los mandalorianos, hogar de una antigua civilización guerrera'
       }
     };
   
@@ -124,7 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
       'kamino':    { x: 0.90, y: 0.90, region: 'Borde Exterior' },
       'mustafar':  { x: 0.65, y: 0.75, region: 'Borde Exterior' },
       'geonosis':  { x: 0.75, y: 0.70, region: 'Borde Exterior' },
-      'utapau':    { x: 0.80, y: 0.85, region: 'Borde Exterior' }
+      'utapau':    { x: 0.80, y: 0.85, region: 'Borde Exterior' },
+      'mandalore': { x: 0.35, y: 0.65, region: 'Borde Exterior' }
     };
   
     // Evitar solapamientos: aplicar un pequeño offset si dos planetas están muy cerca
@@ -202,11 +210,28 @@ document.addEventListener('DOMContentLoaded', () => {
           planetModal.show();
   
           try {
-            const res = await fetch(`https://www.swapi.tech/api/planets/${planetId}`);
-            const data = await res.json();
-            const planet = data.result.properties;
-            const planetDetails = planetInfo[planetKey];
-            const planetName = planetDetails.name.toLowerCase();
+            let planet;
+            let planetDetails = planetInfo[planetKey];
+            let planetName = planetDetails.name.toLowerCase();
+
+            // Caso especial para Mandalore
+            if (planetKey === '14') {
+              planet = {
+                name: 'Mandalore',
+                climate: 'Templado',
+                population: '4,000,000',
+                terrain: 'Montañoso, Desierto',
+                gravity: '1.0 estándar',
+                diameter: '7520',
+                orbital_period: '366',
+                rotation_period: '26',
+                surface_water: '5'
+              };
+            } else {
+              const res = await fetch(`https://www.swapi.tech/api/planets/${planetId}`);
+              const data = await res.json();
+              planet = data.result.properties;
+            }
             
             planetModalLabel.innerHTML = `
               <div class="planet-title">
